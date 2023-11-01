@@ -34,3 +34,15 @@
  * - Contact
  * 
  */
+
+Two types of Export/import
+
+- Default Export/Import
+
+export default Component;
+import Component from "path";
+
+- Named export/import
+
+export const Component;
+import {Component} from "path";
