@@ -1,8 +1,10 @@
-import { CDN_URL } from "../utils/constants";
+import { CDN_URL, LOGO_URL} from "../utils/constants";
 
 const stylecard = {
     background: '#f6f6f6',
 }
+
+import React, { useState } from 'react';
 
 const RestaurantCard = (props) => {
     const {resData} = props;

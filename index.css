@@ -20,24 +20,38 @@
 .search{
     padding: 12px;
 }
-.res-container{
+.res-container, .simmer-container{
     display: flex;
     margin-top: 20px;
     flex-wrap: wrap;
     max-width: 1020px;
 }
 
-.res-card{
+.res-card, .simmer-card{
     border: 1px solid #e6e6e6;
     padding: 15px;
     width: 200px;
-    min-height: 180px;
+    min-height: 200px;
     margin-bottom: 10px;
     cursor: pointer;
+    background: rgb(246, 246, 246);
     &:not(:last-child){
         margin-right: 10px;
     }
     &:hover{
         box-shadow: 5px 5px 22px #e6e6e6;
     }
+}
+
+.filter-btn{
+    margin: 10px 0;
+}
+.login{
+    cursor: pointer;
+    color: #fff;
+    background: #ce2121;
+    border: 1pc solid #ce2121;
+    border-radius: 5px;
+    line-height: 0;
+    width: 100px;
 }
