@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Simmer from "./Shimmer";
+import { RES_URL } from "../utils/constants";
+import { Link } from "react-router-dom";
 
 
 const Body = () => {
@@ -14,12 +16,12 @@ const Body = () => {
     }, []);
 
     const fetchData = async () => {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.587139&lng=77.442412&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch(RES_URL);
 
         const jsonData = await data.json();
         setListOfRestaurent(jsonData?.data?.cards[2]?.card?.card.gridElements.infoWithStyle.restaurants);
         setFilterRes(jsonData?.data?.cards[2]?.card?.card.gridElements.infoWithStyle.restaurants);
-        console.log(jsonData);
+        //console.log(jsonData);
     }  
     
     // Conditional Rendering
@@ -63,7 +65,9 @@ const Body = () => {
             <div className="res-container">
                 {
                     filterRes.map((restaurant) => (
-                        <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                        <Link to={"/restaurants/" + restaurant.info.id}>
+                            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                        </Link>
                     ))
                 }                               
             </div>
