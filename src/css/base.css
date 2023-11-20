@@ -1,0 +1,128 @@
+.app-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e6e6e6;
+  padding: 0 20px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #f7f2f2; }
+
+.logo {
+  width: 140px; }
+
+.nav-items ul {
+  display: flex; }
+
+.nav-items ul li {
+  padding-left: 20px;
+  list-style-type: none; }
+
+.search {
+  padding: 12px; }
+
+.res-container, .simmer-container {
+  display: flex;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  max-width: 1020px; }
+
+.res-card, .simmer-card {
+  border: 1px solid #e6e6e6;
+  padding: 15px;
+  width: 200px;
+  min-height: 200px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #f6f6f6;
+  text-decoration: none;
+  color: #333; }
+  .res-card:not(:last-child), .simmer-card:not(:last-child) {
+    margin-right: 10px; }
+  .res-card:hover, .simmer-card:hover {
+    box-shadow: 5px 5px 22px #e6e6e6; }
+
+.filter-btn {
+  margin: 10px 0; }
+
+.login {
+  cursor: pointer;
+  color: #fff;
+  background: #ce2121;
+  border: 1pc solid #ce2121;
+  border-radius: 5px;
+  line-height: 0;
+  width: 100px; }
+
+.veg-only {
+  display: flex; }
+  .veg-only .vegOnlyLabel {
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+    margin-left: 12px;
+    font-size: 0; }
+  .veg-only .ToggleSwitch_toggleBar__1peIy {
+    cursor: pointer;
+    background: #d4d5d9;
+    width: 36px;
+    position: relative;
+    -webkit-transition: background-color .25s linear;
+    -o-transition: background-color .25s linear;
+    transition: background-color .25s linear;
+    will-change: background-color;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    contain: layout;
+    display: inline-block;
+    border-radius: 4px; }
+    .veg-only .ToggleSwitch_toggleBar__1peIy.active {
+      background-color: green; }
+  .veg-only .ToggleSwitch_toggleThumb__NBLuA, .veg-only .ToggleSwitch_toggleBar__1peIy {
+    height: 18px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+  .veg-only .ToggleSwitch_toggleThumb__NBLuA {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    background: #fff;
+    border: 2px solid #d4d5d9;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+    will-change: transform,border-color;
+    contain: strict;
+    border-radius: 4px;
+    height: 14px; }
+    .veg-only .ToggleSwitch_toggleThumb__NBLuA.active {
+      border-color: green;
+      left: 14px; }
+      .veg-only .ToggleSwitch_toggleThumb__NBLuA.active .ToggleSwitch_toggleThumbContent__33ZU6 {
+        opacity: 1;
+        border-color: green; }
+  .veg-only .ToggleSwitch_toggleThumbContent__33ZU6 {
+    opacity: 0;
+    -webkit-transition: opacity .25s linear;
+    -o-transition: opacity .25s linear;
+    transition: opacity .25s linear;
+    will-change: opacity; }
+  .veg-only .styles_vegOnlyCircle__3UQr3 {
+    background: #0f8a65;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0); }

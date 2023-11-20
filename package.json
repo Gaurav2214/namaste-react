@@ -5,7 +5,9 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "scss": "node-sass src/scss -o src/css",
+    "scss-watch": "node-sass --watch src/scss -o src/css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.18.0"

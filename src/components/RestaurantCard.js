@@ -17,7 +17,7 @@ const RestaurantCard = (props) => {
         sla } = resData?.info;
 
     return(
-        <div className="res-card" style={stylecard}>
+        <div style={stylecard}>
             <img width={200} height={130} src={CDN_URL + cloudinaryImageId} alt="" />
             <h3>{name}</h3>
             <h4>{cuisines.join(", ")}</h4>
