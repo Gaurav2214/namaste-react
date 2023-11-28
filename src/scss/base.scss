@@ -1,8 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .app-container{
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 20px;
+}
+.container{
+    max-width: 1040px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 .header{
     display: flex;
@@ -142,4 +150,46 @@
         -webkit-transform: translate3d(-50%,-50%,0);
         transform: translate3d(-50%,-50%,0);
     }
+}
+
+.promoted-label{
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    top: 5px;
+    border-radius: 4px;
+}
+
+.menu-items{
+    // text-align: center;
+    .btn-add{
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 1;
+        height: 30px;
+        width: 83px;
+        color: #60b246;
+        font-size: .9rem;        
+        text-align: center;
+        background-color: #fff;       
+        box-shadow: 0 3px 8px #e9e9eb;
+        border-radius: 4px;
+    }
+    .img-container{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+    }
+}
+.styles_itemImage__3CsDL{
+    width: 118px;
+    min-width: 118px;
+    height: 96px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 6px;
 }

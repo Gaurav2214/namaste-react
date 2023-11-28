@@ -3,6 +3,9 @@ import { CDN_URL, LOGO_URL} from "../utils/constants";
 const stylecard = {
     background: '#f6f6f6',
 }
+const stylecard1 = {
+    position: 'relative'
+}
 
 import React, { useState } from 'react';
 
@@ -26,6 +29,17 @@ const RestaurantCard = (props) => {
             <h4>{sla.deliveryTime} minutes</h4>
         </div>
     )
+}
+
+export const withPromoted = (RestaurantCard) => {
+    return (props) => {
+        return(
+            <div style={stylecard1}>
+                <div className="promoted-label">Promoted</div>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
 }
 
 export default RestaurantCard;

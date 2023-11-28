@@ -50,3 +50,5 @@ import {Component} from "path";
 # 2 types of Routing in web apps 
 - Client side Routing
 - Server side Routing
+
+Controlled vs Uncontrolled Componnent
