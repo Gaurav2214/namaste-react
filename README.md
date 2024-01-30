@@ -18,7 +18,7 @@
 - HTTPs 
 - Tree Shaking - remove unused code
 
-/**
+# Application Structure
  * 
  * Header
  * - Logo
@@ -33,7 +33,7 @@
  * - Address
  * - Contact
  * 
- */
+ 
 
 Two types of Export/import
 
