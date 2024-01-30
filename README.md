@@ -19,33 +19,30 @@
 - Tree Shaking - remove unused code
 
 # Application Structure
- * 
+  
  * Header
- * - Logo
- * - Navigation
+  - Logo
+  - Navigation
  * Body
- * - Search container
- * - Restaurant Container
- *  - Restaurant Card
+  - Search container
+  - Restaurant Container
+  - Restaurant Card
  * Footer
- * - Copyright
- * - Links 
- * - Address
- * - Contact
- * 
+  - Copyright
+  - Links 
+  - Address
+  - Contact
  
-
-Two types of Export/import
+ 
+# Two types of Export/import
 
 - Default Export/Import
-
-export default Component;
-import Component from "path";
+    - export default Component;
+    - import Component from "path";
 
 - Named export/import
-
-export const Component;
-import {Component} from "path";
+    - export const Component;
+    - import {Component} from "path";
 
 # 2 types of Routing in web apps 
 - Client side Routing
