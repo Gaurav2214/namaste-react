@@ -1,4 +1,6 @@
 import { CDN_URL, LOGO_URL} from "../utils/constants";
+import { useContext } from 'react';
+import UserContext from "../utils/UserContext";
 
 const stylecard = {
     background: '#f6f6f6',
@@ -7,9 +9,8 @@ const stylecard1 = {
     position: 'relative'
 }
 
-import React, { useState } from 'react';
-
 const RestaurantCard = (props) => {
+    const {loggedInUser} = useContext(UserContext);
     const {resData} = props;
     const {
         cloudinaryImageId, 
@@ -27,6 +28,7 @@ const RestaurantCard = (props) => {
             <h4>{costForTwo}</h4>
             <h4>{avgRating} star</h4>
             <h4>{sla.deliveryTime} minutes</h4>
+            <h4>User: {loggedInUser}</h4>
         </div>
     )
 }

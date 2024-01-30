@@ -52,3 +52,25 @@ import {Component} from "path";
 - Server side Routing
 
 Controlled vs Uncontrolled Componnent
+
+# Redux Toolkit
+- Install @reduxjs/toolkit and react-redux (npm install @reduxjs/toolkit and npm i react-redux)
+- Build our store
+- Connect our store with app
+- Slice (cartslice) create a slice to add item in cart
+- dispatch an action
+- read the data with Selector
+
+# Types of testing (developer)
+- Unit Testing
+- Integration Testing
+- End to End Testing
+
+# Setting up testing in our app
+- Install React testing library - npm install --save-dev @testing-library/react
+- Install Jest - npm install --save-dev jest
+- Installed Babel dependencies - npm install --save-dev babel-jest @babel/core @babel/preset-env
+- Configure Babel - babel.config.js
+- Configure Parcel config file to disable default babel transpilation - .parcelrc
+
+

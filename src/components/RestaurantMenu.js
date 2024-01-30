@@ -10,19 +10,23 @@ const RestaurantMenu = () => {
     const [menuList, setMenuList] = useState([]);
     const [vegMenuList, setVegMenuList] = useState([]);
     const [clicked, setClicked] = useState('');  
-    const [showIndex, setShowIndex] = useState(0);  
+
+    const [activeIndex, setActiveIndex] = useState(null);
 
     window.getAllMenuList = (response) =>{
         setMenuList(response?.data?.cards[2].groupedCard?.cardGroupMap.REGULAR?.cards[2].card?.card?.itemCards);
         setVegMenuList(response?.data?.cards[2].groupedCard?.cardGroupMap.REGULAR?.cards[2].card?.card?.itemCards);        
     }
 
+    const handleItemClick = (index) => {
+        setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+       };
+
     if(resInfo === null) return <Simmer />;   
     const {name, cuisines, costForTwoMessage, sla} = resInfo?.data?.cards[0]?.card.card.info;
     const categories = resInfo?.data?.cards[2].groupedCard?.cardGroupMap.REGULAR?.cards.filter(c => 
         c.card.card['@type'] === 'type.googleapis.com/swiggy.presentation.food.v2.ItemCategory'
         );
-        //console.log(categories);
 
     return(
         <div className="menu-items mt-5">
@@ -58,8 +62,8 @@ const RestaurantMenu = () => {
                     <RestaurantCategory 
                         key={category?.card?.card?.title} 
                         data={category?.card?.card} 
-                        showItems={index === showIndex ? true : false}
-                        setShowIndex = {() => setShowIndex(index)}
+                        showItems={activeIndex === index}
+                        onClick={() => handleItemClick(index)}
                     />
                 ))
             }

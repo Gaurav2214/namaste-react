@@ -9,10 +9,12 @@ const useRestaurantList = () => {
     }, [])
 
     const fetchData = async () => {
+        //debugger;
         const data = await fetch(RES_URL);
         const jsonData = await data.json();
-        setListOfRestaurent(jsonData?.data?.cards[2]?.card?.card.gridElements.infoWithStyle.restaurants);
-        window.getAllRestaurantList(jsonData?.data?.cards[2]?.card?.card.gridElements.infoWithStyle.restaurants);
+        console.log(jsonData.data);
+        setListOfRestaurent(jsonData?.data?.cards[4]?.card?.card.gridElements?.infoWithStyle.restaurants);
+        window.getAllRestaurantList(jsonData?.data?.cards[4]?.card?.card.gridElements?.infoWithStyle.restaurants);
     }
     return listOfRestaurent;
 }
