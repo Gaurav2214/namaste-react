@@ -69,5 +69,11 @@ Controlled vs Uncontrolled Componnent
 - Installed Babel dependencies - npm install --save-dev babel-jest @babel/core @babel/preset-env
 - Configure Babel - babel.config.js
 - Configure Parcel config file to disable default babel transpilation - .parcelrc
+- Jest - npx jest --init
+- Install jsdom library - npm install --save-dev jest-environment-jsdom
+- Install @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config 
+- Install @testing-library/jest-dom
+
 
 
