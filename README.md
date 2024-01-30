@@ -20,18 +20,18 @@
 
 # Application Structure
   
- * Header
-  - Logo
-  - Navigation
- * Body
-  - Search container
-  - Restaurant Container
-  - Restaurant Card
- * Footer
-  - Copyright
-  - Links 
-  - Address
-  - Contact
+- Header
+    - Logo
+    - Navigation
+- Body
+    - Search container
+    - Restaurant Container
+    - Restaurant Card
+- Footer
+    - Copyright
+    - Links 
+    - Address
+    - Contact
  
  
 # Two types of Export/import
